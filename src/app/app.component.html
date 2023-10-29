@@ -8,6 +8,16 @@
 <hr>
 <app-successalert></app-successalert>
 <hr>
-<p>Second task - Practicing Databindin</p>
+<p>Second task - Practicing Databinding</p>
 <hr>
 <app-username></app-username>
+<hr>
+<p>Second task - Practicing Directives</p>
+<hr>
+<button class="btn btn-primary" (click)="onClickButton()">
+    Display Details</button>
+<p *ngIf="displayDetails">{{detailsContent}}</p>
+<p 
+*ngFor="let click of clicksArrayLog;" 
+[ngStyle]="{backgroundColor: getBackgroundColor(click)}"
+[ngClass]="{'.white-text': click >= 5}">{{click}}</p>
